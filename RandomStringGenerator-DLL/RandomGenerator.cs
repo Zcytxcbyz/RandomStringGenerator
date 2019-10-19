@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace RandomStringGenerator
 {
-    class RandomStringGenerator
+    class RandomGenerator
     {
         /// <summary>
         /// 说明：

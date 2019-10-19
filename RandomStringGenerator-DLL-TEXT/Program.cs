@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
+using RandomStringGenerator;
 
-namespace RandomStringGenerator
+namespace RandomStringGenerator_DLL_TEXT
 {
     class Program
     {
-        [DllImport("RandomStringGenerator.dll")]
-        public static extern string Generator(string Expression);
         static void Main(string[] args)
         {
-            Console.WriteLine(Generator("[0-9](5)"));
-            Console.ReadKey();
+            RandomStringGenerator.RandomStringGenerator RandomStringGenerator = new RandomStringGenerator.RandomStringGenerator();
         }
     }
 }
