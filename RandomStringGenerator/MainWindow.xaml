@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RandomStringGenerator"
         mc:Ignorable="d"
-        Title="随机字符串生成器" Width="250" Height="226" WindowStyle="ToolWindow" ResizeMode="CanMinimize" Loaded="Window_Loaded" Closed="Window_Closed">
+        Title="随机字符串生成器" Width="250" Height="226" WindowStyle="ToolWindow" ResizeMode="CanMinimize" Closed="Window_Closed" Visibility="Hidden">
     <Grid Margin="10,10,10,14">
         <RichTextBox x:Name="MainRichTextBox" Height="110" VerticalAlignment="Top">
             <FlowDocument/>

@@ -30,6 +30,7 @@ namespace RandomStringGenerator
         public MainWindow()
         {
             InitializeComponent();
+            Window_Loaded(new object(), new RoutedEventArgs());
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -75,6 +76,10 @@ namespace RandomStringGenerator
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "错误");
+            }
+            finally
+            {
+                this.Visibility = Visibility.Visible;
             }
         }
 
