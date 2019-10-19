@@ -74,6 +74,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -107,6 +111,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MinButtonMove.png" />
+    <Resource Include="MinButtonNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CloseButtonMove.png" />
+    <Resource Include="CloseButtonNormal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

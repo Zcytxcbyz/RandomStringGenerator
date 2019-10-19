@@ -30,7 +30,7 @@ namespace RandomStringGenerator
         public MainWindow()
         {
             InitializeComponent();
-            Window_Loaded(new object(), new RoutedEventArgs());
+            //Window_Loaded(new object(), new RoutedEventArgs());
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -79,11 +79,11 @@ namespace RandomStringGenerator
             }
             finally
             {
-                this.Visibility = Visibility.Visible;
+                BeginStoryboard(WindowLoad);
             }
         }
 
-        private void Window_Closed(object sender, EventArgs e)
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             try
             {
@@ -116,6 +116,18 @@ namespace RandomStringGenerator
             {
                 MessageBox.Show(ex.Message, "错误");
             }
+            finally
+            {
+                e.Cancel = true;
+                this.ShowInTaskbar = false;
+                WindowClose.Completed += new EventHandler(WindowClose_Completed);
+                BeginStoryboard(WindowClose);
+            }
+        }
+
+        private void WindowClose_Completed(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         private void CreateXmlFile()
@@ -177,7 +189,7 @@ namespace RandomStringGenerator
         private void MainExpander_Collapsed(object sender, RoutedEventArgs e)
         {
             //System.Windows.Forms.MessageBox.Show("Collapsed");
-            this.Height = 226;
+            this.Height = 230;
         }
 
         private void CheckBoxs_Changed(object sender, RoutedEventArgs e)
@@ -275,6 +287,16 @@ namespace RandomStringGenerator
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(Resource.Readme, "帮助");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }
