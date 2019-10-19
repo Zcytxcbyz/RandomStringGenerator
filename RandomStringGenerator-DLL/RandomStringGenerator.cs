@@ -15,7 +15,7 @@ namespace RandomStringGenerator
         /// </summary>
         /// <param name="Expression">表达式</param>
         /// <returns>随机字符串</returns>
-        public string Generator(string Expression)
+        public static string Generator(string Expression)
         {
             MatchCollection matcon = Regex.Matches(Expression, @"(?<=\[.*)[0-9A-Za-z]-[0-9A-Za-z](?=.*\]\([^\(\)]+\))");
             foreach (Match match in matcon)
@@ -85,7 +85,7 @@ namespace RandomStringGenerator
             return result;
 
         }
-        private string RanStrGen(char[] CustomChars,int MinLength,int MaxLength,int Mode=0)
+        private static string RanStrGen(char[] CustomChars,int MinLength,int MaxLength,int Mode=0)
         {
             int seed = Guid.NewGuid().GetHashCode();
             Random random = new Random(seed);
@@ -136,7 +136,7 @@ namespace RandomStringGenerator
             }
             return RandomsString;
         }
-        private string RanStrGen(char[] CustomChars,int Length,int Mode=0)
+        private static string RanStrGen(char[] CustomChars,int Length,int Mode=0)
         {
             return RanStrGen(CustomChars, Length, Length, Mode);
         }
