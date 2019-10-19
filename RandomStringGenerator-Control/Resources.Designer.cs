@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RandomStringGenerator_Control {
+namespace RandomStringGenerator {
     using System;
     
     

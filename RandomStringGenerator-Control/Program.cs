@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace RandomStringGenerator_Control
+namespace RandomStringGenerator
 {
     class Program
     {
