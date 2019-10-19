@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="RandomStringGenerator">
-      <HintPath>.\RandomStringGenerator.dll</HintPath>
+      <HintPath>..\RandomStringGenerator-DLL\bin\Release\RandomStringGenerator.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
