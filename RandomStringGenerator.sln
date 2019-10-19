@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomStringGenerator-DLL",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomStringGenerator-DLL-TEXT", "RandomStringGenerator-DLL-TEXT\RandomStringGenerator-DLL-TEXT.csproj", "{D72989A0-456A-44FA-8B8E-5D91338DFFBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomStringGenerator", "RandomStringGenerator\RandomStringGenerator.csproj", "{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{D72989A0-456A-44FA-8B8E-5D91338DFFBB}.Release|x64.Build.0 = Release|Any CPU
 		{D72989A0-456A-44FA-8B8E-5D91338DFFBB}.Release|x86.ActiveCfg = Release|Any CPU
 		{D72989A0-456A-44FA-8B8E-5D91338DFFBB}.Release|x86.Build.0 = Release|Any CPU
+		{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}.Debug|x64.Build.0 = Debug|Any CPU
+		{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}.Debug|x86.Build.0 = Debug|Any CPU
+		{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}.Release|x64.ActiveCfg = Release|Any CPU
+		{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}.Release|x64.Build.0 = Release|Any CPU
+		{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}.Release|x86.ActiveCfg = Release|Any CPU
+		{8139FCE0-C05C-42B9-A282-BC7B2049DD1A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
