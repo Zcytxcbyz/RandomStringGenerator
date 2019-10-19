@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RandomStringGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="随机字符串生成器" Width="250" Height="226" WindowStyle="ToolWindow" ResizeMode="CanMinimize" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid Margin="10,10,10,14">
+        <RichTextBox x:Name="MainRichTextBox" Height="110" VerticalAlignment="Top">
+            <FlowDocument/>
+        </RichTextBox>
+        <Expander x:Name="MainExpander" Header="高级" VerticalAlignment="Top" Margin="0,139,0,0" Height="220" Expanded="MainExpander_Expanded" Collapsed="MainExpander_Collapsed">
+            <Grid>
+                <Rectangle Margin="0,5,0,10" Stroke="#66000000"/>
+                <CheckBox x:Name="SelectAllBox" Content="全选" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="SelectAllBox_Changed" Unchecked="SelectAllBox_Changed"/>
+                <CheckBox x:Name="NumBox" Content="数字" HorizontalAlignment="Left" Margin="30,30.098,0,0" VerticalAlignment="Top" Checked="CheckBoxs_Changed" Unchecked="CheckBoxs_Changed"/>
+                <CheckBox x:Name="UpperBox" Content="大写字母" HorizontalAlignment="Left" Margin="30,50.196,0,0" VerticalAlignment="Top" Checked="CheckBoxs_Changed" Unchecked="CheckBoxs_Changed"/>
+                <CheckBox x:Name="LowerBox" Content="小写字母" HorizontalAlignment="Left" Margin="30,70.294,0,0" VerticalAlignment="Top" Checked="CheckBoxs_Changed" Unchecked="CheckBoxs_Changed"/>
+                <TextBox x:Name="ExpressionBox" Height="23" Margin="60,100.685,10,40" VerticalAlignment="Bottom"/>
+                <Label Content="表达式" HorizontalAlignment="Left" Margin="10,98.445,0,40" VerticalAlignment="Bottom"/>
+                <RadioButton x:Name="FixedButton" Content="固定长度" HorizontalAlignment="Left" Margin="10,90.392,0,0" VerticalAlignment="Top" Checked="FixedButton_Checked"/>
+                <RadioButton x:Name="IndefiniteButton" Content="不定长度" HorizontalAlignment="Left" Margin="10,109.632,0,0" VerticalAlignment="Top" Checked="IndefiniteButton_Checked"/>
+                <TextBox x:Name="LengthBox" HorizontalAlignment="Left" Height="16" Margin="82,88.632,0,0" VerticalAlignment="Top" Width="40"/>
+                <TextBox x:Name="MinLengthBox" HorizontalAlignment="Left" Height="16" Margin="82,107.872,0,0" VerticalAlignment="Top" Width="40" IsEnabled="False"/>
+                <TextBox x:Name="MaxLengthBox" HorizontalAlignment="Left" Height="16" Margin="137.19,107.872,0,0" VerticalAlignment="Top" Width="40" IsEnabled="False"/>
+                <Label Content="-" HorizontalAlignment="Left" Margin="122,102.52,0,0" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Right" Margin="0,0,10,20" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="16">
+                    <Hyperlink Click="Hyperlink_Click">不会写表达式</Hyperlink>
+                </TextBlock>
+            </Grid>
+        </Expander>
+        <Button x:Name="GenerateButton" Content="生成" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Width="75" Click="GenerateButton_Click"/>
+        <Button x:Name="ClearButton" Content="清空" HorizontalAlignment="Right" Margin="0,115,10,0" VerticalAlignment="Top" Width="75" Click="ClearButton_Click"/>
+
     </Grid>
 </Window>
