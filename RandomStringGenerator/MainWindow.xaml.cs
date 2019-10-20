@@ -27,6 +27,7 @@ namespace RandomStringGenerator
             +"\\"
             + System.IO.Path.GetFileNameWithoutExtension(System.Windows.Forms.Application.ExecutablePath)
             + ".xml";
+        bool eventlock = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -37,10 +38,11 @@ namespace RandomStringGenerator
         {
             try
             {
+                eventlock = true;
                 SelectAllBox.IsThreeState = false;
                 FixedButton.IsChecked = true;
                 SelectAllBox.IsChecked = true;
-                LengthBox.Text = "5";
+                LengthBox.Text = "10";
                 if (!File.Exists(SettingFileName))
                 {
                     CreateXmlFile();
@@ -79,6 +81,7 @@ namespace RandomStringGenerator
             }
             finally
             {
+                eventlock = false;
                 BeginStoryboard(WindowLoad);
             }
         }
@@ -183,13 +186,26 @@ namespace RandomStringGenerator
 
         private void MainExpander_Expanded(object sender, RoutedEventArgs e)
         {
-            this.Height = 420;
+            if (!eventlock)
+            {
+                BeginStoryboard(ExpanderExpanding);
+            }
+            else
+            {
+                this.Height = 420;
+            }
         }
 
         private void MainExpander_Collapsed(object sender, RoutedEventArgs e)
         {
-            //System.Windows.Forms.MessageBox.Show("Collapsed");
-            this.Height = 230;
+            if (!eventlock)
+            {
+                BeginStoryboard(ExpanderCollapsing);
+            }
+            else
+            {
+                this.Height = 230;
+            }
         }
 
         private void CheckBoxs_Changed(object sender, RoutedEventArgs e)

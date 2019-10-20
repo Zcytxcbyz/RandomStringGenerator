@@ -61,6 +61,16 @@ namespace RandomStringGenerator {
         }
         
         /// <summary>
+        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Icon RandomStringGeneratorICON {
+            get {
+                object obj = ResourceManager.GetObject("RandomStringGeneratorICON", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 说明：
         ///[自定义字符集](长度){模式}如：CHAR:[a-z,A-Z,0-9,\[,\]](10,20){0};END。
         ///长度：(最小长度，最大长度)或(固定长度)。
